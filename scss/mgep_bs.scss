@@ -1,11 +1,141 @@
+// Eskolako loloreen definizioak
+/* MU */
+$mu-iluna: #004851;
+$mu: #00A3AD;
+$mu-60: #66C5D2;
+$mu-35: #A5DDE5;
 
-$primary:   hsl(183, 100%, 34%);
-$dark:      hsl(183, 100%, 17%);
-$light:     hsl(183, 100%, 95%);
-$success:   hsl(114, 37%, 39%);
-$danger:     hsl(346, 100%, 42%);
-$info:      hsl(199, 100%, 41%);
-$warning:   hsl(21,  100%, 52%);
+/* Goi eskola politeknikoa (MGEP) */
+$mgep-iluna: hsl(10, 65%, 43%);
+$mgep: hsl(21, 71%, 52%);
+$mgep-distira: hsl(35, 100%, 46%);
+$mgep-distira-50: hsl(35, 87%, 73%);
 
+/* Humanitate eta Hezkuntza Zientzien Fakultatea (HUEZI) */
+$huezi-iluna: #6C1D45;
+$huezi: #A50050;
+$huesi-distira: #DA1884;
+$huesi-distira-50: #ED8CC2;
+
+/* Empresagintza (ETEO) */
+$eteo-iluna: #275D38;
+$eteo: #44883E;
+$eteo-distira: #509E2F;
+$eteo-distira-50: #A8CF97;
+
+/* CTA: Call to action. Descubre más, Apuntate... */
+$horia: hsl(44, 100%, 59%);
+$cta: $horia;
+
+/* Profesionalentzako Prestakuntza (PRO) */
+$pro: hsl(346, 100%, 42%);
+$pro-beltza: hsl(20, 4%, 17%);
+$pro-beltza-50: #2C2A297F;
+
+/* Beste batzuk */
+$grisa: #e1e2ed;
+$grisa2: #ededed;
+$grisa3: #e3e3e3;
+$gris-iluna: #2c2e35;
+$berde-argia: #95c11f;
+$berdea: #45883e;
+$berde-iluna: #0e311c;
+$larrosa: #ab1254;
+$urdina: #0091d3;
+$morea: #814795;
+$asfabrik: #ff2e17;
+$bbf: #d6382d;
+
+// Bootstrap aldaketak
+@import "../bootstrap/scss/functions";
+
+// @ToDo: Nola egin $primary-text zuria izateko? Berdina MGEP eta ETEOrekin
+$primary: $mu;
+$secondary: $gris-iluna;
+$dark: $mu-iluna;
+$light: $mu-35;
+$success: $berde-argia;
+$danger: $pro;
+$info: $urdina;
+$warning: hsl(21, 100%, 52%);
+$white: ghostwhite;
+$primary-text: $white;
+
+/*
+$border-radius: 0.25rem;
+$border-width: 1px;
+*/
+
+$body-bg: $grisa3;
+$body-color: $pro-beltza;
+
+// Theme color berriak sortzeko:
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/variables-dark";
+
+$theme-colors: map-merge($theme-colors, ("mgep": $mgep,
+            "huezi": $huezi,
+            "eteo": $eteo,
+            "pro": $pro,
+            "cta": $cta,
+            "white": $white));
+
+// Beste guztia importatu
 @import '../bootstrap/scss/bootstrap.scss';
 
+/* Material design icons */
+@import 'https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.1.96/css/materialdesignicons.min.css';
+
+
+// Nire aldaketak
+.card {
+    background-color: $white;
+}
+
+.card-header {
+    margin-block: 1.2em;
+    margin-inline-end: 2em;
+}
+
+.card-header:first-child {
+    border-radius: 0 1000em 1000em 0;
+    width: max-content;
+    max-width: calc(100% - 2em);
+    padding-inline-end: 3em;
+    text-align: start;
+}
+
+.card-footer {
+    border-block-start: 0;
+    margin-block: 0.8em;
+    margin-inline-start: 2em;
+}
+
+.card-footer:last-child {
+    border-radius: 1000em 0 0 1000em;
+    width: max-content;
+    max-width: calc(100% - 2em);
+    padding-inline-start: 3em;
+    text-align: end;
+    margin-inline-start: auto;
+}
+
+.alert-warning::before {
+    font-family: 'Material Design Icons';
+    content: "\F0026";
+}
+
+.alert-info::before {
+    font-family: 'Material Design Icons';
+    content: "\F02FC";
+}
+
+.alert-success::before {
+    font-family: 'Material Design Icons';
+    content: "\F05E0";
+}
+
+.alert-danger::before {
+    font-family: 'Material Design Icons';
+    content: "\F015C";
+}

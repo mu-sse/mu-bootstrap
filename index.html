@@ -7,11 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MGEP bootstrap</title>
   <link rel="stylesheet" href="scss/mgep_bs.css">
+  <link rel="shortcut icon" href="https://www.mondragon.edu/MU-0.0.1-SNAPSHOT/images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-  <header class="container-fluid">
-    <h1>Bootstrap MGEP</h1>
+  <header class="container-fluid bg-dark text-light">
+    <h1 class="m-0 py-4">Bootstrap MGEP</h1>
   </header>
   <nav class="navbar navbar-expand-lg bg-primary">
     <div class="container-fluid">
@@ -20,7 +21,11 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a class="navbar-brand" href="#">Hidden brand</a>
+        <a class="navbar-brand" href="#">
+          <img alt="MU Mondragon Unibersitatea logo"
+            src="https://www.mondragon.edu/documents/20182/22121/mondragon-unibertsitatea-logotipo.png/3a7e0700-d8e3-4634-b467-bb51c86393bc"
+            height="24">
+        </a>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -34,13 +39,13 @@
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn btn-outline-secondary" type="submit">Search</button>
         </form>
       </div>
     </div>
   </nav>
-  <section class="container">
-    <h2>
+  <section class="container mt-4 bg-primary">
+    <h2 class="py-3">
       Alerts
     </h2>
     <div class="alert alert-primary" role="alert">
@@ -67,22 +72,185 @@
     <div class="alert alert-dark" role="alert">
       A simple dark alert—check it out!
     </div>
+    <div class="alert alert-mgep" role="alert">
+      A simple MGEP alert—check it out! Hau ez dabil :'(
+    </div>
+    <div class="alert alert-huezi" role="alert">
+      A simple HUEZI alert—check it out! Hau ez dabil :'(
+    </div>
+    <div class="alert alert-eteo" role="alert">
+      A simple ETEO alert—check it out! Hau ez dabil :'(
+    </div>
+    <div class="alert alert-pro" role="alert">
+      A simple PRO alert—check it out! Hau ez dabil :'(
+    </div>
   </section>
 
-  <section class="container">
-    <h2>
+  <section class="container mt-4 pb-3">
+    <h2 class="py-3">
       Buttons
     </h2>
-    <button type="button" class="btn btn-primary">Primary</button>
-    <button type="button" class="btn btn-secondary">Secondary</button>
-    <button type="button" class="btn btn-success">Success</button>
-    <button type="button" class="btn btn-danger">Danger</button>
-    <button type="button" class="btn btn-warning">Warning</button>
-    <button type="button" class="btn btn-info">Info</button>
-    <button type="button" class="btn btn-light">Light</button>
-    <button type="button" class="btn btn-dark">Dark</button>
+    <div>
+      <button type="button" class="btn btn-primary"><span class="mdi mdi-numeric-1-box"></span> Primary</button>
+      <button type="button" class="btn btn-secondary"><span class="mdi mdi-numeric-2-box"></span> Secondary</button>
+      <button type="button" class="btn btn-success"><span class="mdi mdi-check-circle"></span> Success</button>
+      <button type="button" class="btn btn-danger"><span class="mdi mdi-close-octagon"></span> Danger</button>
+      <button type="button" class="btn btn-warning"><span class="mdi mdi-alert"></span> Warning</button>
+      <button type="button" class="btn btn-info"><span class="mdi mdi-information"></span> Info</button>
+      <button type="button" class="btn btn-light"><span class="mdi mdi-lightbulb-on"></span> Light</button>
+      <button type="button" class="btn btn-dark"><span class="mdi mdi-lightbulb"></span> Dark</button>
+      <button type="button" class="btn btn-link">Link <span class="mdi mdi-link"></span></button>
+      <button type="button" class="btn btn-mgep"><span class="mdi mdi-alpha-m-box"></span> MGEP</button>
+      <button type="button" class="btn btn-huezi"><span class="mdi mdi-alpha-h-box"></span> HUEZI</button>
+      <button type="button" class="btn btn-eteo"><span class="mdi mdi-alpha-e-box"></span> ETEO</button>
+      <button type="button" class="btn btn-pro"><span class="mdi mdi-professional-hexagon"></span> PRO</button>
+      <button type="button" class="btn btn-white"><span class="mdi mdi-alpha-f-box"></span> White</button>
+    </div>
+    <hr>
+    <div>
+      <button type="button" class="btn btn-outline-primary"><span class="mdi mdi-numeric-1-box"></span> Primary</button>
+      <button type="button" class="btn btn-outline-secondary"><span class="mdi mdi-numeric-2-box"></span>
+        Secondary</button>
+      <button type="button" class="btn btn-outline-success"><span class="mdi mdi-check-circle"></span> Success</button>
+      <button type="button" class="btn btn-outline-danger"><span class="mdi mdi-close-octagon"></span> Danger</button>
+      <button type="button" class="btn btn-outline-warning"><span class="mdi mdi-alert"></span> Warning</button>
+      <button type="button" class="btn btn-outline-info"><span class="mdi mdi-information"></span> Info</button>
+      <button type="button" class="btn btn-outline-light"><span class="mdi mdi-lightbulb-on"></span> Light</button>
+      <button type="button" class="btn btn-outline-dark"><span class="mdi mdi-lightbulb"></span> Dark</button>
+      <button type="button" class="btn btn-outline-link">Link <span class="mdi mdi-link"></span></button>
+      <button type="button" class="btn btn-outline-mgep"><span class="mdi mdi-alpha-m-box"></span> MGEP</button>
+      <button type="button" class="btn btn-outline-huezi"><span class="mdi mdi-alpha-h-box"></span> HUEZI</button>
+      <button type="button" class="btn btn-outline-eteo"><span class="mdi mdi-alpha-e-box"></span> ETEO</button>
+      <button type="button" class="btn btn-outline-pro"><span class="mdi mdi-professional-hexagon"></span> PRO</button>
+      <button type="button" class="btn btn-outline-white"><span class="mdi mdi-alpha-f-box"></span> White</button>
+    </div>
+  </section>
+  <section class="container mt-4 pb-3 bg-secondary">
+    <h2 class="py-3 text-light">
+      Cards
+    </h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://picsum.photos/id/236/400/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div><!-- card -->
+      </div><!-- col -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://picsum.photos/id/237/400/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div><!-- card -->
+      </div><!-- col -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://picsum.photos/id/238/400/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div><!-- card -->
+      </div><!-- col -->
+    </div>
+  </section>
+  <section class="container mt-4 pb-3 bg-light">
+    <h2 class="py-3">Cards eskola</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card text-center">
+          <div class="card-header bg-dark text-white">
+            Featured
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+          <div class="card-footer text-dark bg-light">
+            2 days ago
+          </div>
+        </div>
+      </div>
 
-    <button type="button" class="btn btn-link">Link</button>
+      <div class="col-md-4">
+        <div class="card text-center">
+          <div class="card-header bg-mgep text-white">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio architecto similique maiores voluptatum
+            dignissimos, earum numquam, sit autem cupiditate in laudantium mollitia consequuntur qui impedit vero
+            suscipit recusandae. Illum at officia minima!
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+          <div class="card-footer text-white bg-secondary">
+            2 days ago
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card text-center">
+          <div class="card-header bg-huezi text-white">
+            Featured
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+          <div class="card-footer text-white bg-secondary">
+            2 days ago
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-4">
+        <div class="card text-center">
+          <div class="card-header bg-eteo text-white">
+            Featured
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+          <div class="card-footer text-white bg-secondary">
+            2 days ago
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card text-center">
+          <div class="card-header bg-pro text-white">
+            Featured
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+          <div class="card-footer text-white bg-secondary">
+            2 days ago
+          </div>
+        </div>
+      </div>
+    </div><!-- row-->
   </section>
 </body>
 
