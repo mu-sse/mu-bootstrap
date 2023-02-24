@@ -41,6 +41,7 @@ $berde-argia: #95c11f;
 $berdea: #45883e;
 $berde-iluna: #0e311c;
 $larrosa: #ab1254;
+$laranja: hsl(21, 100%, 52%);
 $urdina: #0091d3;
 $morea: #814795;
 $asfabrik: #ff2e17;
@@ -51,15 +52,15 @@ $bbf: #d6382d;
 
 // @ToDo: Nola egin $primary-text zuria izateko? Berdina MGEP eta ETEOrekin
 $primary: $mu;
-$secondary: $gris-iluna;
-$dark: $mu-iluna;
-$light: $mu-35;
+$secondary: $mu-iluna;
+$tertiary: $mu-60;
+$quaternary: $mu-35;
+$dark: $pro-beltza;
+$light: ghostwhite;
 $success: $berde-argia;
 $danger: $pro;
 $info: $urdina;
-$warning: hsl(21, 100%, 52%);
-$white: ghostwhite;
-$primary-text: $white;
+$warning: $laranja;
 
 /*
 $border-radius: 0.25rem;
@@ -73,12 +74,17 @@ $body-color: $pro-beltza;
 @import "../bootstrap/scss/variables";
 @import "../bootstrap/scss/variables-dark";
 
-$theme-colors: map-merge($theme-colors, ("mgep": $mgep,
-            "huezi": $huezi,
-            "eteo": $eteo,
-            "pro": $pro,
-            "cta": $cta,
-            "white": $white));
+$theme-colors: map-merge(
+    $theme-colors, (
+        "tertiary": $tertiary,
+        "quaternary": $quaternary,
+        "mgep": $mgep,
+        "huezi": $huezi,
+        "eteo": $eteo,
+        "pro": $pro,
+        "cta": $cta
+    )
+);
 
 // Beste guztia importatu
 @import '../bootstrap/scss/bootstrap.scss';
@@ -101,7 +107,9 @@ $theme-colors: map-merge($theme-colors, ("mgep": $mgep,
     border-radius: 0 1000em 1000em 0;
     width: max-content;
     max-width: calc(100% - 2em);
+    padding-inline-start: 2em;
     padding-inline-end: 3em;
+    padding-block: 1em;
     text-align: start;
 }
 
@@ -138,4 +146,20 @@ $theme-colors: map-merge($theme-colors, ("mgep": $mgep,
 .alert-danger::before {
     font-family: 'Material Design Icons';
     content: "\F015C";
+}
+
+.biribil {
+    border-radius: 1000rem;
+    padding-block: 0.5em;
+    padding-inline: 2em;
+}
+
+.biribil-left {
+    border-radius: 0 1000rem 1000rem 0;
+    padding-inline-start: 1em;
+}
+
+.biribil-right {
+    border-radius: 1000rem 0 0 1000rem;
+    padding-inline-end: 1em;
 }
