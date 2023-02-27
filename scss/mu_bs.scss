@@ -111,6 +111,8 @@ $theme-colors: map-merge(
     padding-inline-end: 3em;
     padding-block: 1em;
     text-align: start;
+    background-color: $secondary;
+    color: $light;
 }
 
 .card-footer {
@@ -126,6 +128,7 @@ $theme-colors: map-merge(
     padding-inline-start: 3em;
     text-align: end;
     margin-inline-start: auto;
+    background-color: $tertiary;
 }
 
 .alert-warning::before {
