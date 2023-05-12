@@ -51,10 +51,11 @@ $bbf: #d6382d;
 @import "https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;700&display=swap";
 $font-family-base: 'Encode Sans', sans-serif;
 
-// Bootstrap aldaketak
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "../bootstrap/scss/functions";
 
-// @ToDo: Nola egin $primary-text zuria izateko? Berdina MGEP eta ETEOrekin
+// Nola egin Primary testua zuria izateko? Berdina MGEP eta ETEOrekin.
+// Contrastea aldatuta egiten du, baina ez da hain accesiblea.
 $primary: $mu;
 $secondary: $mu-iluna;
 $tertiary: $mu-60;
@@ -74,24 +75,41 @@ $border-width: 1px;
 $body-bg: $grisa3;
 $body-color: $pro-beltza;
 
-// Theme color berriak sortzeko:
+// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 @import "../bootstrap/scss/variables";
 @import "../bootstrap/scss/variables-dark";
 
-$theme-colors: map-merge(
-    $theme-colors, (
-        "tertiary": $tertiary,
-        "quaternary": $quaternary,
-        "mgep": $mgep,
-        "huezi": $huezi,
-        "eteo": $eteo,
-        "pro": $pro,
-        "cta": $cta
-    )
+// $min-contrast-ratio: 3;  // Reducing accessibility, we can have white text on primary.
+
+$custom-theme-colors: (
+    "tertiary": $tertiary,
+    "quaternary": $quaternary,
+    "mgep": $mgep,
+    "huezi": $huezi,
+    "eteo": $eteo,
+    "pro": $pro,
+    "cta": $cta
 );
 
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
+
+// Alertentzako falta diren koloreak gehitu.
+:root {
+@each $state, $color in $custom-theme-colors {
+    $state-bg-color: tint-color($color, 80%);
+    $state-text-emphasis-color: shade-color($color, 60%);
+    $state-border-subltle-color: tint-color($color, 60%);
+    --bs-#{$state}-bg-subtle: #{$state-bg-color};
+    --bs-#{$state}-text-emphasis: #{$state-text-emphasis-color};
+    --bs-#{$state}-border-subtle: ${$state-border-subtle-color};
+}
+}
+
+
 // Beste guztia importatu
-@import '../bootstrap/scss/bootstrap.scss';
+@import "../bootstrap/scss/bootstrap";
+
 
 /* Material design icons */
 @import 'https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.1.96/css/materialdesignicons.min.css';
@@ -133,6 +151,7 @@ $theme-colors: map-merge(
     text-align: end;
     margin-inline-start: auto;
     background-color: $tertiary;
+    color: $dark;
 }
 
 .alert-warning::before {
