@@ -110,11 +110,6 @@ $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 // Beste guztia importatu
 @import "../bootstrap/scss/bootstrap";
 
-
-/* Material design icons */
-@import 'https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.1.96/css/materialdesignicons.min.css';
-
-
 // Nire aldaketak
 .card {
     background-color: $white;
@@ -152,26 +147,6 @@ $theme-colors: map-merge($theme-colors, $custom-theme-colors);
     margin-inline-start: auto;
     background-color: $tertiary;
     color: $dark;
-}
-
-.alert-warning::before {
-    font-family: 'Material Design Icons';
-    content: "\F0026";
-}
-
-.alert-info::before {
-    font-family: 'Material Design Icons';
-    content: "\F02FC";
-}
-
-.alert-success::before {
-    font-family: 'Material Design Icons';
-    content: "\F05E0";
-}
-
-.alert-danger::before {
-    font-family: 'Material Design Icons';
-    content: "\F015C";
 }
 
 .biribil {

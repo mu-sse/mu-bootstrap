@@ -11,7 +11,6 @@
 $border-radius: 0.25rem;
 $border-width: 1px;
 */
-@import 'https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.1.96/css/materialdesignicons.min.css';
 :root {
   --bs-tertiary-bg-subtle: #e0f3f6;
   --bs-tertiary-text-emphasis: #294f54;
@@ -12726,7 +12725,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-/* Material design icons */
 .card {
   background-color: #fff;
 }
@@ -12772,26 +12770,6 @@ textarea.form-control-lg {
           margin-inline-start: auto;
   background-color: #66C5D2;
   color: hsl(20, 4%, 17%);
-}
-
-.alert-warning::before {
-  font-family: "Material Design Icons";
-  content: "\f0026";
-}
-
-.alert-info::before {
-  font-family: "Material Design Icons";
-  content: "\f02fc";
-}
-
-.alert-success::before {
-  font-family: "Material Design Icons";
-  content: "\f05e0";
-}
-
-.alert-danger::before {
-  font-family: "Material Design Icons";
-  content: "\f015c";
 }
 
 .biribil {
