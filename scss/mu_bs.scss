@@ -46,6 +46,9 @@ $urdina: #0091d3;
 $morea: #814795;
 $asfabrik: #ff2e17;
 $bbf: #d6382d;
+$gorria: #BA2E1E
+
+/* Nik gehitutakoa */
 
 // Font aldaketa
 @import "https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;700&display=swap";
@@ -63,7 +66,7 @@ $quaternary: $mu-35;
 $dark: $pro-beltza;
 $light: ghostwhite;
 $success: $berde-argia;
-$danger: $pro;
+$danger: $gorria;
 $info: $urdina;
 $warning: $laranja;
 
@@ -74,6 +77,7 @@ $border-width: 1px;
 
 $body-bg: $grisa3;
 $body-color: $pro-beltza;
+
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 @import "../bootstrap/scss/variables";
@@ -102,8 +106,20 @@ $theme-colors: map-merge($theme-colors, $custom-theme-colors);
     $state-border-subltle-color: tint-color($color, 60%);
     --bs-#{$state}-bg-subtle: #{$state-bg-color};
     --bs-#{$state}-text-emphasis: #{$state-text-emphasis-color};
-    --bs-#{$state}-border-subtle: ${$state-border-subtle-color};
+    --bs-#{$state}-border-subtle: #{$state-border-subltle-color};
 }
+}
+
+[data-bs-theme=dark] {
+    /* begitu */
+    @each $state, $color in $custom-theme-colors {
+        $state-bg-color: shade-color($color, 80%);
+        $state-text-emphasis-color: tiny-color($color, 40%);
+        $state-border-subltle-color: shade-color($color, 40%);
+        --bs-#{$state}-bg-subtle: #{$state-bg-color};
+        --bs-#{$state}-text-emphasis: #{$state-text-emphasis-color};
+        --bs-#{$state}-border-subtle: #{$state-border-subltle-color};
+    }
 }
 
 
@@ -114,6 +130,11 @@ $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 .card {
     background-color: $white;
 }
+
+[data-bs-theme=dark] .card, .card[data-bs-theme=dark] {
+    background-color: $dark;
+}
+
 
 .card-header {
     margin-block: 1.2em;

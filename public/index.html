@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MU bootstrap</title>
+  <title>MUtstrap</title>
   <link rel="stylesheet" href="./css/mu_bs.css">
   <link rel="shortcut icon" href="https://www.mondragon.edu/MU-0.0.1-SNAPSHOT/images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
@@ -42,123 +42,127 @@
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-secondary" type="submit">Search</button>
         </form>
+
+        <!-- Theme selector -->
+        <script>
+          function updateTheme(newTheme) {
+            document.querySelector("html").setAttribute("data-bs-theme", newTheme);
+          }
+        </script>
+        <div class="input-group mx-3 w-auto">
+          <input type="radio" class="btn-check" name="theme-options" id="light" autocomplete="off" checked>
+          <label class="btn btn-outline-light rounded-start" for="light" onclick="updateTheme('light')"
+            title="Set light theme">
+            <span class="mdi mdi-lightbulb-on"></span>
+          </label>
+          <input type="radio" class="btn-check" name="theme-options" id="dark" autocomplete="off">
+          <label class="btn btn-outline-dark" for="dark" onclick="updateTheme('dark')" title="Set dark theme">
+            <span class="mdi mdi-lightbulb-off"></span>
+          </label>
+        </div>
       </div>
     </div>
   </nav>
-  <section class="container mt-4 bg-primary p-4">
-    <h2 class="pb-3">
-      Alerts
-    </h2>
-    <div class="alert alert-primary" role="alert">
-      <span class="mdi mdi-numeric-1-box"></span>
-      A simple primary alert—check it out!
-    </div>
-    <div class="alert alert-secondary" role="alert">
-      <span class="mdi mdi-numeric-2-box"></span>
-      A simple secondary alert—check it out!
-    </div>
-    <div class="alert alert-tertiary" role="alert">
-      <span class="mdi mdi-numeric-3-box"></span>
-      A simple tertiary alert—check it out! (berezia sass-en)
-    </div>
-    <div class="alert alert-quaternary" role="alert">
-      <span class="mdi mdi-numeric-4-box"></span>
-      A simple quaternary alert—check it out! (berezia sass-en)
-    </div>
-    <div class="alert alert-success" role="alert">
-      <span class="mdi mdi-check-circle"></span>
-      A simple success alert—check it out!
-    </div>
-    <div class="alert alert-danger" role="alert">
-      <span class="mdi mdi-close-octagon"></span>
-      A simple danger alert—check it out!
-    </div>
-    <div class="alert alert-warning" role="alert">
-      <span class="mdi mdi-alert"></span>
-      A simple warning alert—check it out!
-    </div>
-    <div class="alert alert-info" role="alert">
-      <span class="mdi mdi-information"></span>
-      A simple info alert—check it out!
-    </div>
-    <div class="alert alert-light" role="alert">
-      <span class="mdi mdi-lightbulb-on"></span>
-      A simple light alert—check it out!
-    </div>
-    <div class="alert alert-dark" role="alert">
-      <span class="mdi mdi-lightbulb"></span>
-      A simple dark alert—check it out!
-    </div>
-    <div class="alert alert-mgep" role="alert">
-      <span class="mdi mdi-alpha-m-box"></span>
-      A simple MGEP alert—check it out! (berezia sass-en)
-    </div>
-    <div class="alert alert-huezi" role="alert">
-      <span class="mdi mdi-alpha-h-box"></span>
-      A simple HUEZI alert—check it out! (berezia sass-en)
-    </div>
-    <div class="alert alert-eteo" role="alert">
-      <span class="mdi mdi-alpha-e-box"></span>
-      A simple ETEO alert—check it out! (berezia sass-en)
-    </div>
-    <div class="alert alert-pro" role="alert">
-      <span class="mdi mdi-professional-hexagon"></span>
-      A simple PRO alert—check it out! (berezia sass-en)
-    </div>
-    <div class="alert alert-cta" role="alert">
-      <span class="mdi mdi-gesture-tap"></span>
-      A simple Call to action alert—check it out! (berezia sass-en)
-    </div>
-  </section>
-
-  <section class="container mt-4 pb-3">
-    <h2 class="py-3">
-      Buttons
-    </h2>
-    <div class="d-flex flex-wrap justify-content-center gap-4">
-      <button type="button" class="btn btn-primary"><span class="mdi mdi-numeric-1-box"></span> Primary</button>
-      <button type="button" class="btn btn-secondary"><span class="mdi mdi-numeric-2-box"></span> Secondary</button>
-      <button type="button" class="btn btn-tertiary"><span class="mdi mdi-numeric-3-box"></span> Tertiary</button>
-      <button type="button" class="btn btn-quaternary"><span class="mdi mdi-numeric-4-box"></span> Quaternary</button>
-      <button type="button" class="btn btn-success"><span class="mdi mdi-check-circle"></span> Success</button>
-      <button type="button" class="btn btn-danger"><span class="mdi mdi-close-octagon"></span> Danger</button>
-      <button type="button" class="btn btn-warning"><span class="mdi mdi-alert"></span> Warning</button>
-      <button type="button" class="btn btn-info"><span class="mdi mdi-information"></span> Info</button>
-      <button type="button" class="btn btn-light"><span class="mdi mdi-lightbulb-on"></span> Light</button>
-      <button type="button" class="btn btn-dark"><span class="mdi mdi-lightbulb"></span> Dark</button>
-      <button type="button" class="btn btn-link">Link <span class="mdi mdi-link"></span></button>
-      <button type="button" class="btn btn-mgep"><span class="mdi mdi-alpha-m-box"></span> MGEP</button>
-      <button type="button" class="btn btn-huezi"><span class="mdi mdi-alpha-h-box"></span> HUEZI</button>
-      <button type="button" class="btn btn-eteo"><span class="mdi mdi-alpha-e-box"></span> ETEO</button>
-      <button type="button" class="btn btn-pro"><span class="mdi mdi-professional-hexagon"></span> PRO</button>
-      <button type="button" class="btn btn-cta"><span class="mdi mdi-gesture-tap"></span> Call to action</button>
-    </div>
-    <hr>
-    <div class="d-flex flex-wrap justify-content-center gap-4">
-      <button type="button" class="btn btn-outline-primary"><span class="mdi mdi-numeric-1-box"></span> Primary</button>
-      <button type="button" class="btn btn-outline-secondary"><span class="mdi mdi-numeric-2-box"></span> Secondary</button>
-      <button type="button" class="btn btn-outline-tertiary"><span class="mdi mdi-numeric-3-box"></span> Tertiary</button>
-      <button type="button" class="btn btn-outline-quaternary"><span class="mdi mdi-numeric-4-box"></span> Quaternary</button>
-      <button type="button" class="btn btn-outline-success"><span class="mdi mdi-check-circle"></span> Success</button>
-      <button type="button" class="btn btn-outline-danger"><span class="mdi mdi-close-octagon"></span> Danger</button>
-      <button type="button" class="btn btn-outline-warning"><span class="mdi mdi-alert"></span> Warning</button>
-      <button type="button" class="btn btn-outline-info"><span class="mdi mdi-information"></span> Info</button>
-      <button type="button" class="btn btn-outline-light"><span class="mdi mdi-lightbulb-on"></span> Light</button>
-      <button type="button" class="btn btn-outline-dark"><span class="mdi mdi-lightbulb"></span> Dark</button>
-      <button type="button" class="btn btn-outline-link">Link <span class="mdi mdi-link"></span></button>
-      <button type="button" class="btn btn-outline-mgep"><span class="mdi mdi-alpha-m-box"></span> MGEP</button>
-      <button type="button" class="btn btn-outline-huezi"><span class="mdi mdi-alpha-h-box"></span> HUEZI</button>
-      <button type="button" class="btn btn-outline-eteo"><span class="mdi mdi-alpha-e-box"></span> ETEO</button>
-      <button type="button" class="btn btn-outline-pro"><span class="mdi mdi-professional-hexagon"></span> PRO</button>
-      <button type="button" class="btn btn-outline-cta"><span class="mdi mdi-gesture-tap"></span> Call to action</button>
+  <main>
+    <section class="container p-4">
+      <h2 class="pb-3">
+        Alerts
+      </h2>
+      <div class="alert alert-primary" role="alert">
+        <span class="mdi mdi-numeric-1-box"></span>
+        A simple primary alert—check it out!
       </div>
-      <hr>
-      <div class="d-flex flex-wrap justify-content-center gap-4 bg-dark py-4">
-        <button type="button" class="btn btn-outline-primary"><span class="mdi mdi-numeric-1-box"></span> Primary</button>
-        <button type="button" class="btn btn-outline-secondary"><span class="mdi mdi-numeric-2-box"></span> Secondary</button>
-        <button type="button" class="btn btn-outline-tertiary"><span class="mdi mdi-numeric-3-box"></span> Tertiary</button>
-        <button type="button" class="btn btn-outline-quaternary"><span class="mdi mdi-numeric-4-box"></span> Quaternary</button>
-        <button type="button" class="btn btn-outline-success"><span class="mdi mdi-check-circle"></span> Success</button>
+      <div class="alert alert-secondary" role="alert">
+        <span class="mdi mdi-numeric-2-box"></span>
+        A simple secondary alert—check it out!
+      </div>
+      <div class="alert alert-tertiary" role="alert">
+        <span class="mdi mdi-numeric-3-box"></span>
+        A simple tertiary alert—check it out! (berezia sass-en)
+      </div>
+      <div class="alert alert-quaternary" role="alert">
+        <span class="mdi mdi-numeric-4-box"></span>
+        A simple quaternary alert—check it out! (berezia sass-en)
+      </div>
+      <div class="alert alert-success" role="alert">
+        <span class="mdi mdi-check-circle"></span>
+        A simple success alert—check it out!
+      </div>
+      <div class="alert alert-danger" role="alert">
+        <span class="mdi mdi-close-octagon"></span>
+        A simple danger alert—check it out!
+      </div>
+      <div class="alert alert-warning" role="alert">
+        <span class="mdi mdi-alert"></span>
+        A simple warning alert—check it out!
+      </div>
+      <div class="alert alert-info" role="alert">
+        <span class="mdi mdi-information"></span>
+        A simple info alert—check it out!
+      </div>
+      <div class="alert alert-light" role="alert">
+        <span class="mdi mdi-lightbulb-on"></span>
+        A simple light alert—check it out!
+      </div>
+      <div class="alert alert-dark" role="alert">
+        <span class="mdi mdi-lightbulb"></span>
+        A simple dark alert—check it out!
+      </div>
+      <div class="alert alert-mgep" role="alert">
+        <span class="mdi mdi-alpha-m-box"></span>
+        A simple MGEP alert—check it out! (berezia sass-en)
+      </div>
+      <div class="alert alert-huezi" role="alert">
+        <span class="mdi mdi-alpha-h-box"></span>
+        A simple HUEZI alert—check it out! (berezia sass-en)
+      </div>
+      <div class="alert alert-eteo" role="alert">
+        <span class="mdi mdi-alpha-e-box"></span>
+        A simple ETEO alert—check it out! (berezia sass-en)
+      </div>
+      <div class="alert alert-pro" role="alert">
+        <span class="mdi mdi-professional-hexagon"></span>
+        A simple PRO alert—check it out! (berezia sass-en)
+      </div>
+      <div class="alert alert-cta" role="alert">
+        <span class="mdi mdi-gesture-tap"></span>
+        A simple Call to action alert—check it out! (berezia sass-en)
+      </div>
+    </section>
+
+    <section class="container mt-4 pb-3">
+      <h2 class="py-3">
+        Buttons
+      </h2>
+      <div class="d-flex flex-wrap justify-content-center gap-4">
+        <button type="button" class="btn btn-primary"><span class="mdi mdi-numeric-1-box"></span> Primary</button>
+        <button type="button" class="btn btn-secondary"><span class="mdi mdi-numeric-2-box"></span> Secondary</button>
+        <button type="button" class="btn btn-tertiary"><span class="mdi mdi-numeric-3-box"></span> Tertiary</button>
+        <button type="button" class="btn btn-quaternary"><span class="mdi mdi-numeric-4-box"></span> Quaternary</button>
+        <button type="button" class="btn btn-success"><span class="mdi mdi-check-circle"></span> Success</button>
+        <button type="button" class="btn btn-danger"><span class="mdi mdi-close-octagon"></span> Danger</button>
+        <button type="button" class="btn btn-warning"><span class="mdi mdi-alert"></span> Warning</button>
+        <button type="button" class="btn btn-info"><span class="mdi mdi-information"></span> Info</button>
+        <button type="button" class="btn btn-light"><span class="mdi mdi-lightbulb-on"></span> Light</button>
+        <button type="button" class="btn btn-dark"><span class="mdi mdi-lightbulb"></span> Dark</button>
+        <button type="button" class="btn btn-link">Link <span class="mdi mdi-link"></span></button>
+        <button type="button" class="btn btn-mgep"><span class="mdi mdi-alpha-m-box"></span> MGEP</button>
+        <button type="button" class="btn btn-huezi"><span class="mdi mdi-alpha-h-box"></span> HUEZI</button>
+        <button type="button" class="btn btn-eteo"><span class="mdi mdi-alpha-e-box"></span> ETEO</button>
+        <button type="button" class="btn btn-pro"><span class="mdi mdi-professional-hexagon"></span> PRO</button>
+        <button type="button" class="btn btn-cta"><span class="mdi mdi-gesture-tap"></span> Call to action</button>
+      </div>
+      <div class="d-flex flex-wrap justify-content-center gap-4 mt-4">
+        <button type="button" class="btn btn-outline-primary"><span class="mdi mdi-numeric-1-box"></span>
+          Primary</button>
+        <button type="button" class="btn btn-outline-secondary"><span class="mdi mdi-numeric-2-box"></span>
+          Secondary</button>
+        <button type="button" class="btn btn-outline-tertiary"><span class="mdi mdi-numeric-3-box"></span>
+          Tertiary</button>
+        <button type="button" class="btn btn-outline-quaternary"><span class="mdi mdi-numeric-4-box"></span>
+          Quaternary</button>
+        <button type="button" class="btn btn-outline-success"><span class="mdi mdi-check-circle"></span>
+          Success</button>
         <button type="button" class="btn btn-outline-danger"><span class="mdi mdi-close-octagon"></span> Danger</button>
         <button type="button" class="btn btn-outline-warning"><span class="mdi mdi-alert"></span> Warning</button>
         <button type="button" class="btn btn-outline-info"><span class="mdi mdi-information"></span> Info</button>
@@ -168,150 +172,237 @@
         <button type="button" class="btn btn-outline-mgep"><span class="mdi mdi-alpha-m-box"></span> MGEP</button>
         <button type="button" class="btn btn-outline-huezi"><span class="mdi mdi-alpha-h-box"></span> HUEZI</button>
         <button type="button" class="btn btn-outline-eteo"><span class="mdi mdi-alpha-e-box"></span> ETEO</button>
-        <button type="button" class="btn btn-outline-pro"><span class="mdi mdi-professional-hexagon"></span> PRO</button>
-        <button type="button" class="btn btn-outline-cta"><span class="mdi mdi-gesture-tap"></span> Call to action</button>
-        </div>
-        <hr>
+        <button type="button" class="btn btn-outline-pro"><span class="mdi mdi-professional-hexagon"></span>
+          PRO</button>
+        <button type="button" class="btn btn-outline-cta"><span class="mdi mdi-gesture-tap"></span> Call to
+          action</button>
+      </div>
+    </section>
+    <section class="container mt-4 pb-3">
+      <h2 class="py-3">
+        Biribil (nik)
+      </h2>
       <div class="d-flex flex-wrap justify-content-center gap-4">
         <button type="button" class="btn biribil btn-primary">Normal</button>
-        <button type="button" class="btn biribil btn-primary">100 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore voluptates reiciendis assumenda iste pariatur quo aperiam, repudiandae est, consequuntur vero ipsam officiis neque quis dicta aliquid quia, iure perferendis! Repellat velit iste maxime dolorum labore eum voluptate debitis obcaecati rem. Aperiam dignissimos aspernatur veritatis. Modi totam recusandae quisquam necessitatibus dignissimos voluptatum repellat tempore ad amet. Facere sunt dolores vel explicabo consectetur consequuntur quae nostrum! Dolores eius recusandae sapiente! Quis, rerum vitae. Suscipit laborum, voluptate quas deleniti omnis similique eos expedita explicabo corrupti. Iste, dolor ut eligendi vitae dolorem modi earum explicabo consectetur qui, ad voluptatem veritatis suscipit facere laborum inventore!</button>
-        <button type="button" class="btn biribil btn-primary">180 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus sit tenetur blanditiis facere assumenda voluptates error, eaque accusantium, autem accusamus, delectus odio alias quibusdam. Nam vitae deleniti exercitationem. Porro nemo obcaecati excepturi possimus suscipit blanditiis iusto necessitatibus facilis esse architecto est doloremque itaque corporis nulla iure reiciendis neque, voluptatibus optio corrupti quisquam magnam asperiores culpa consectetur. Quibusdam, vero ad odit natus praesentium nostrum quia adipisci quasi optio soluta expedita ullam tempore nam unde et, aut eligendi reiciendis saepe vel? Sapiente quaerat labore, beatae ex sed blanditiis dolor quibusdam placeat repellat voluptates, similique laudantium nobis iure repudiandae aut ea. Dolor et suscipit sed, consectetur placeat voluptatum iusto nostrum quam! Facilis dolores nesciunt molestias atque exercitationem maiores excepturi suscipit laudantium cumque hic minus numquam asperiores maxime, fugit, eos, neque sequi voluptates! Cupiditate molestiae ratione, adipisci veritatis culpa similique tempora sed fugiat error molestias, modi quo eum id, et suscipit atque neque quibusdam sapiente? Corrupti mollitia ducimus debitis impedit quo, dolorem itaque commodi minus maxime dolores reprehenderit nam laboriosam vero velit, blanditiis placeat repellendus expedita officia aliquam quia, ad ut accusantium pariatur recusandae.</button>
-        <button type="button" class="btn biribil btn-primary">320Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aliquam officia est delectus culpa perferendis a quos! Maxime atque ratione eos quis vitae obcaecati accusantium est veritatis possimus delectus ipsum, corporis sed ex doloribus consectetur consequatur mollitia voluptates dolore sequi corrupti ducimus officiis sunt ab tenetur! Consectetur quae id nihil asperiores modi omnis quisquam harum! Veritatis quibusdam illo saepe vel sed! Provident corporis commodi quasi reprehenderit numquam nemo dolorem labore obcaecati voluptates eaque, qui fugit ut recusandae unde veritatis alias quia accusamus. Consequuntur at, aliquam iusto qui, nulla totam inventore, consectetur quisquam earum sequi accusamus distinctio quam aliquid expedita. Nostrum assumenda ea blanditiis porro labore possimus nam alias eum neque suscipit cupiditate nulla reiciendis ipsam voluptatum, perferendis libero id? Animi deleniti quidem nulla quibusdam iure nam laudantium aspernatur? Expedita ipsam voluptates officiis, possimus dolores repellat illum, mollitia asperiores reprehenderit veritatis temporibus! Labore alias nostrum soluta necessitatibus, animi sed quis veritatis sunt veniam quia ratione eius molestias a architecto explicabo quibusdam rem odit nemo error. Ipsam obcaecati dolor natus amet itaque tempore adipisci ab quisquam hic libero veniam ratione ut quasi saepe aut nisi, eaque eos cum vitae? Incidunt laboriosam autem, aperiam distinctio at dicta provident! Molestiae dolore amet laborum, nemo exercitationem ad repellendus numquam iusto maxime tempore incidunt ipsum distinctio quasi molestias ducimus deleniti voluptatibus aspernatur, maiores quibusdam omnis magni culpa? Laborum, eligendi corrupti quisquam laboriosam necessitatibus fuga maxime error dicta temporibus nihil sequi hic, iure quaerat, quos expedita suscipit provident cumque similique ipsum. Expedita obcaecati hic praesentium ullam cum delectus aliquam, dolorem ex iste non, recusandae quod eaque pariatur perferendis placeat repellendus. Atque reprehenderit facere natus dolorem ducimus enim eveniet velit quisquam animi nesciunt hic labore architecto ab impedit similique commodi aliquam vel, sunt dignissimos illum! Dolorem dignissimos rerum debitis placeat quaerat esse fugit explicabo incidunt, nisi harum exercitationem atque nemo possimus quidem recusandae aliquam quibusdam? Animi maiores explicabo praesentium similique culpa sapiente dolorem enim. Voluptatem soluta facere ducimus.</button>
         <button type="button" class="btn biribil biribil-left btn-primary">Left</button>
         <button type="button" class="btn biribil biribil-right btn-primary">Right</button>
       </div>
-    </div>
-  </section>
-  <section class="container mt-4 pb-3 bg-secondary">
-    <h2 class="py-3 text-light">
-      Cards
-    </h2>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://picsum.photos/id/236/400/300" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div><!-- card -->
-      </div><!-- col -->
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://picsum.photos/id/237/400/300" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div><!-- card -->
-      </div><!-- col -->
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://picsum.photos/id/238/400/300" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div><!-- card -->
-      </div><!-- col -->
-    </div>
-  </section>
-  <section class="container mt-4 pb-3 bg-light">
-    <h2 class="py-3">Cards eskola</h2>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card text-center">
-          <div class="card-header">
-            Default (Secondary)
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-          <div class="card-footer">
-            Default (Tertiary)
+      <div class="d-flex flex-wrap justify-content-center gap-4 mt-4" title="goiko koloreekin funtzionatzen du">
+        <button type="button" class="btn biribil btn-success">Normal</button>
+        <button type="button" class="btn biribil biribil-left btn-success">Left</button>
+        <button type="button" class="btn biribil biribil-right btn-success">Right</button>
+      </div>
+      <div class="d-flex flex-wrap justify-content-center gap-4 mt-4" title="goiko koloreekin funtzionatzen du">
+        <button type="button" class="btn biribil btn-warning">Normal</button>
+        <button type="button" class="btn biribil biribil-left btn-warning">Left</button>
+        <button type="button" class="btn biribil biribil-right btn-warning">Right</button>
+      </div>
+      <div class="d-flex flex-wrap justify-content-center gap-4 mt-4" title="goiko koloreekin funtzionatzen du">
+        <button type="button" class="btn biribil btn-danger">Normal</button>
+        <button type="button" class="btn biribil biribil-left btn-danger">Left</button>
+        <button type="button" class="btn biribil biribil-right btn-danger">Right</button>
+      </div>
+      <div class="d-flex flex-wrap justify-content-center gap-4 mt-4">
+        <h3>Arazoak testu oso luzeekin</h3>
+        <button type="button" class="btn biribil btn-primary">100 Lorem ipsum, dolor sit amet consectetur adipisicing
+          elit. Inventore voluptates reiciendis assumenda iste pariatur quo aperiam, repudiandae est, consequuntur vero
+          ipsam officiis neque quis dicta aliquid quia, iure perferendis! Repellat velit iste maxime dolorum labore eum
+          voluptate debitis obcaecati rem. Aperiam dignissimos aspernatur veritatis. Modi totam recusandae quisquam
+          necessitatibus dignissimos voluptatum repellat tempore ad amet. Facere sunt dolores vel explicabo consectetur
+          consequuntur quae nostrum! Dolores eius recusandae sapiente! Quis, rerum vitae. Suscipit laborum, voluptate
+          quas deleniti omnis similique eos expedita explicabo corrupti. Iste, dolor ut eligendi vitae dolorem modi
+          earum explicabo consectetur qui, ad voluptatem veritatis suscipit facere laborum inventore!</button>
+        <button type="button" class="btn biribil btn-primary">180 Lorem, ipsum dolor sit amet consectetur adipisicing
+          elit. Temporibus sit tenetur blanditiis facere assumenda voluptates error, eaque accusantium, autem accusamus,
+          delectus odio alias quibusdam. Nam vitae deleniti exercitationem. Porro nemo obcaecati excepturi possimus
+          suscipit blanditiis iusto necessitatibus facilis esse architecto est doloremque itaque corporis nulla iure
+          reiciendis neque, voluptatibus optio corrupti quisquam magnam asperiores culpa consectetur. Quibusdam, vero ad
+          odit natus praesentium nostrum quia adipisci quasi optio soluta expedita ullam tempore nam unde et, aut
+          eligendi reiciendis saepe vel? Sapiente quaerat labore, beatae ex sed blanditiis dolor quibusdam placeat
+          repellat voluptates, similique laudantium nobis iure repudiandae aut ea. Dolor et suscipit sed, consectetur
+          placeat voluptatum iusto nostrum quam! Facilis dolores nesciunt molestias atque exercitationem maiores
+          excepturi suscipit laudantium cumque hic minus numquam asperiores maxime, fugit, eos, neque sequi voluptates!
+          Cupiditate molestiae ratione, adipisci veritatis culpa similique tempora sed fugiat error molestias, modi quo
+          eum id, et suscipit atque neque quibusdam sapiente? Corrupti mollitia ducimus debitis impedit quo, dolorem
+          itaque commodi minus maxime dolores reprehenderit nam laboriosam vero velit, blanditiis placeat repellendus
+          expedita officia aliquam quia, ad ut accusantium pariatur recusandae.</button>
+        <button type="button" class="btn biribil btn-primary">320Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Quis aliquam officia est delectus culpa perferendis a quos! Maxime atque ratione eos quis vitae
+          obcaecati accusantium est veritatis possimus delectus ipsum, corporis sed ex doloribus consectetur consequatur
+          mollitia voluptates dolore sequi corrupti ducimus officiis sunt ab tenetur! Consectetur quae id nihil
+          asperiores modi omnis quisquam harum! Veritatis quibusdam illo saepe vel sed! Provident corporis commodi quasi
+          reprehenderit numquam nemo dolorem labore obcaecati voluptates eaque, qui fugit ut recusandae unde veritatis
+          alias quia accusamus. Consequuntur at, aliquam iusto qui, nulla totam inventore, consectetur quisquam earum
+          sequi accusamus distinctio quam aliquid expedita. Nostrum assumenda ea blanditiis porro labore possimus nam
+          alias eum neque suscipit cupiditate nulla reiciendis ipsam voluptatum, perferendis libero id? Animi deleniti
+          quidem nulla quibusdam iure nam laudantium aspernatur? Expedita ipsam voluptates officiis, possimus dolores
+          repellat illum, mollitia asperiores reprehenderit veritatis temporibus! Labore alias nostrum soluta
+          necessitatibus, animi sed quis veritatis sunt veniam quia ratione eius molestias a architecto explicabo
+          quibusdam rem odit nemo error. Ipsam obcaecati dolor natus amet itaque tempore adipisci ab quisquam hic libero
+          veniam ratione ut quasi saepe aut nisi, eaque eos cum vitae? Incidunt laboriosam autem, aperiam distinctio at
+          dicta provident! Molestiae dolore amet laborum, nemo exercitationem ad repellendus numquam iusto maxime
+          tempore incidunt ipsum distinctio quasi molestias ducimus deleniti voluptatibus aspernatur, maiores quibusdam
+          omnis magni culpa? Laborum, eligendi corrupti quisquam laboriosam necessitatibus fuga maxime error dicta
+          temporibus nihil sequi hic, iure quaerat, quos expedita suscipit provident cumque similique ipsum. Expedita
+          obcaecati hic praesentium ullam cum delectus aliquam, dolorem ex iste non, recusandae quod eaque pariatur
+          perferendis placeat repellendus. Atque reprehenderit facere natus dolorem ducimus enim eveniet velit quisquam
+          animi nesciunt hic labore architecto ab impedit similique commodi aliquam vel, sunt dignissimos illum! Dolorem
+          dignissimos rerum debitis placeat quaerat esse fugit explicabo incidunt, nisi harum exercitationem atque nemo
+          possimus quidem recusandae aliquam quibusdam? Animi maiores explicabo praesentium similique culpa sapiente
+          dolorem enim. Voluptatem soluta facere ducimus.</button>
+      </div>
+      </div>
+    </section>
+    <section class="container mt-4 pb-3">
+      <h2 class="py-3">
+        Cards
+      </h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://picsum.photos/id/236/400/300" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div><!-- card -->
+        </div><!-- col -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://picsum.photos/id/237/400/300" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div><!-- card -->
+        </div><!-- col -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://picsum.photos/id/238/400/300" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div><!-- card -->
+        </div><!-- col -->
+      </div>
+    </section>
+    <section class="container">
+      <h2 class="py-3">Cards eskola</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card text-center">
+            <div class="card-header">
+              Default (Secondary)
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            <div class="card-footer">
+              Default (Tertiary)
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card text-center">
-          <div class="card-header bg-mgep text-dark">
-            MGEP
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio architecto similique maiores voluptatum
-            dignissimos, earum numquam, sit autem cupiditate in laudantium mollitia consequuntur qui impedit vero
-            suscipit recusandae. Illum at officia minima!</p>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-mgep">Go somewhere</a>
-          </div>
-          <div class="card-footer bg-dark text-white ">
-            Dark
+        <div class="col-md-4">
+          <div class="card text-center" data-bs-theme="dark">
+            <div class="card-header bg-quaternary text-dark">
+              Quaternary
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">This card will ALWAYS be DARK</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            <div class="card-footer bg-light">
+              Light
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-4">
-        <div class="card text-center">
-          <div class="card-header bg-huezi">
-            HUEZI
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-huezi">Go somewhere</a>
-          </div>
-          <div class="card-footer bg-quaternary">
-            Quaternary
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat est laudantium consequuntur suscipit quas error nulla tempora velit et. Magni eius in sunt velit earum placeat est id sequi minima vero. A.</p>
+        <div class="col-md-4">
+          <div class="card text-center">
+            <div class="card-header bg-mgep text-dark">
+              MGEP
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio architecto similique maiores voluptatum
+                dignissimos, earum numquam, sit autem cupiditate in laudantium mollitia consequuntur qui impedit vero
+                suscipit recusandae. Illum at officia minima!</p>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-mgep">Go somewhere</a>
+            </div>
+            <div class="card-footer bg-dark text-white ">
+              Dark
+            </div>
           </div>
         </div>
-      </div>
 
-
-      <div class="col-md-4">
-        <div class="card text-center">
-          <div class="card-header bg-eteo text-dark">
-            ETEO
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-eteo">Go somewhere</a>
-          </div>
-          <div class="card-footer text-white bg-dark">
-            Dark
+        <div class="col-md-4">
+          <div class="card text-center">
+            <div class="card-header bg-huezi">
+              HUEZI
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-huezi">Go somewhere</a>
+            </div>
+            <div class="card-footer bg-quaternary">
+              Quaternary
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat est laudantium consequuntur suscipit
+                quas error nulla tempora velit et. Magni eius in sunt velit earum placeat est id sequi minima vero. A.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-4">
-        <div class="card text-center">
-          <div class="card-header bg-pro">
-            PRO
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-pro">Go somewhere</a>
-          </div>
-          <div class="card-footer text-white bg-dark">
-            Dark
+
+        <div class="col-md-4">
+          <div class="card text-center">
+            <div class="card-header bg-eteo text-dark">
+              ETEO
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-eteo">Go somewhere</a>
+            </div>
+            <div class="card-footer text-white bg-dark">
+              Dark
+            </div>
           </div>
         </div>
-      </div>
-    </div><!-- row-->
-  </section>
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+        <div class="col-md-4">
+          <div class="card text-center">
+            <div class="card-header bg-pro">
+              PRO
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-pro">Go somewhere</a>
+            </div>
+            <div class="card-footer text-white bg-dark">
+              Dark
+            </div>
+          </div>
+        </div>
+      </div><!-- row-->
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script>
+  </main>
 </body>
 
 </html>
