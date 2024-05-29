@@ -35,8 +35,8 @@ jobs:
       
       - name: Compare CSS files
         run: |
-          diff mu_bs.css public/mu_bs.css
-          diff mu_bs.css.map public/mu_bs.css.map
+          diff mu_bs.css public/css/mu_bs.css
+          diff mu_bs.css.map public/css/mu_bs.css.map
 
   deploy:
     needs: build
