@@ -39,8 +39,7 @@ jobs:
           git add public/css/mu_bs.css
           git add public/css/mu_bs.css.map
           git commit -m "Automatic Build SCSS" -a || echo "No changes to commit"
-          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/mu-sse/mu-bootstrap.git
-
+          git push origin HEAD:main
   deploy:
     needs: build
     runs-on: ubuntu-latest
