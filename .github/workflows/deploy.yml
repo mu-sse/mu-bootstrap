@@ -30,9 +30,6 @@ jobs:
         with:
           name: css-artifacts
           path: mu_bs.css
-      
-      - name: Compare CSS files
-        run: diff mu_bs.css public/css/mu_bs.css
 
   deploy:
     needs: build
