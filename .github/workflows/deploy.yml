@@ -28,13 +28,16 @@ jobs:
       - name: Build SCSS
         run: npx sass --source-map scss/mu_bs.scss public/css/mu_bs.css
     
+      - name: Build SCSS (min)
+        run: npx sass --source-map scss/mu_bs.scss public/css/mu_bs.min.css
+    
       - name: Upload CSS as artifact
         uses: actions/upload-artifact@v4
         with:
           name: css-files
           path: | 
-            public/css/mu_bs.css
-            public/css/mu_bs.css.map
+            public/css/*.css
+            public/css/*.map
 
       - name: Create page artifact
         uses: actions/upload-pages-artifact@v3
@@ -45,8 +48,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add public/css/mu_bs.css
-          git add public/css/mu_bs.css.map
+          git add public/css/*.css public/css/*.map
           git commit -m "Automatic Build SCSS" -a || echo "No changes to commit"
           git push origin HEAD:main
         env:
