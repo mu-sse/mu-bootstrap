@@ -28,8 +28,14 @@ jobs:
       - name: Upload CSS as artifact
         uses: actions/upload-artifact@v2
         with:
-          name: css-artifacts
+          name: mu_bs.css
           path: mu_bs.css
+      
+      - name: Compare CSS files
+        run: |
+          if ! diff mu_bs.css public/css/mu_bs.css; then
+            echo "::warning::Existing and generated CSS files are different"
+          fi
 
   deploy:
     needs: build
