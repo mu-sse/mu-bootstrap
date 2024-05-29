@@ -8,7 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    continue-on-error: true
+    permissions:
+        pages: write
+        id-token: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -24,18 +26,29 @@ jobs:
         run: npm install sass
     
       - name: Build SCSS
-        run: npx sass scss/mu_bs.scss public/css/mu_bs.css
+        run: npx sass --source-map scss/mu_bs.scss public/css/mu_bs.css
     
       - name: Upload CSS as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: mu_bs.css
-          path: public/css/mu_bs.css
+          name: css-files
+          path: | 
+            public/css/mu_bs.css
+            public/css/mu_bs.css.map
 
       - name: Create page artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add public/css/mu_bs.css
+          git add public/css/mu_bs.css.map
+          git commit -m "Automatic Build SCSS" -a || echo "No changes to commit"
+          git push origin HEAD:main
 
   deploy:
     needs: build
