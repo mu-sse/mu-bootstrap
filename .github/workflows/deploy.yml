@@ -49,6 +49,8 @@ jobs:
           git add public/css/mu_bs.css.map
           git commit -m "Automatic Build SCSS" -a || echo "No changes to commit"
           git push origin HEAD:main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   deploy:
     needs: build
