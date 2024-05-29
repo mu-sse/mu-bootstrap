@@ -23,20 +23,16 @@ jobs:
         run: npm install sass
     
       - name: Build SCSS
-        run: npx sass --source-map scss/mu_bs.scss mu_bs.css
+        run: npx sass scss/mu_bs.scss mu_bs.css
     
       - name: Upload CSS as artifact
         uses: actions/upload-artifact@v2
         with:
           name: css-artifacts
-          path: |
-            mu_bs.css
-            mu_bs.css.map
+          path: mu_bs.css
       
       - name: Compare CSS files
-        run: |
-          diff mu_bs.css public/css/mu_bs.css
-          diff mu_bs.css.map public/css/mu_bs.css.map
+        run: diff mu_bs.css public/css/mu_bs.css
 
   deploy:
     needs: build
