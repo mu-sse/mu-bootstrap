@@ -92,7 +92,7 @@ $custom-theme-colors: (
     "huezi": $huezi,
     "eteo": $eteo,
     "pro": $pro,
-    "cta": $cta
+    "cta": $cta,
 );
 
 $theme-colors: map-merge($theme-colors, $custom-theme-colors);
@@ -185,3 +185,13 @@ $theme-colors: map-merge($theme-colors, $custom-theme-colors);
     border-radius: 1000rem 0 0 1000rem;
     padding-inline-end: 1em;
 }
+
+.text-primary-soft { color: $mu-iluna; }
+.text-secondary-soft{ color: $mu-35,; }
+.text-tertiary-soft{ color: $mu-iluna; }
+.text-quaternary-soft{ color: $mu-iluna; }
+.text-mgep-soft{ color: hsl(10, 65%, 27%); }
+.text-huezi-soft{ color: $huezi-distira-50; }
+.text-eteo-soft{ color: #013812; }
+.text-pro-soft{ color: hsl(346, 100%, 85%); }
+.text-cta-soft{ color: hsl(44, 100%, 20%); }
