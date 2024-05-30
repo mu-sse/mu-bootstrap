@@ -12621,4 +12621,40 @@ textarea.form-control-lg {
   padding-inline-end: 1em;
 }
 
+.text-primary-soft {
+  color: #004851;
+}
+
+.text-secondary-soft {
+  color: #A5DDE5;
+}
+
+.text-tertiary-soft {
+  color: #004851;
+}
+
+.text-quaternary-soft {
+  color: #004851;
+}
+
+.text-mgep-soft {
+  color: hsl(10, 65%, 27%);
+}
+
+.text-huezi-soft {
+  color: #ED8CC2;
+}
+
+.text-eteo-soft {
+  color: #013812;
+}
+
+.text-pro-soft {
+  color: hsl(346, 100%, 85%);
+}
+
+.text-cta-soft {
+  color: hsl(44, 100%, 20%);
+}
+
 /*# sourceMappingURL=mu_bs.min.css.map */
