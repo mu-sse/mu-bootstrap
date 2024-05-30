@@ -29,7 +29,7 @@ jobs:
         run: npx sass --source-map scss/mu_bs.scss public/css/mu_bs.css
     
       - name: Build SCSS (min)
-        run: npx sass --source-map scss/mu_bs.scss public/css/mu_bs.min.css
+        run: npx sass --source-map --style compressed scss/mu_bs.scss public/css/mu_bs.min.css
     
       - name: Upload CSS as artifact
         uses: actions/upload-artifact@v4
